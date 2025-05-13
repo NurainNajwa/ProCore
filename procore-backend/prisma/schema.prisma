@@ -1,0 +1,148 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URI")
+}
+
+model User {
+  user_id  String @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  email    String @unique
+  password String
+
+  role_id  String?   @db.ObjectId // FK to Resource
+  resource   Resource? @relation(fields: [role_id], references: [resource_id])  
+
+  profileImage String? // Store Cloudinary image URL
+  verified     Boolean @default(false)
+
+  created_at DateTime @default(now()) @map("created_at")
+  updated_at DateTime @updatedAt @map("updated_at")
+
+  projects Project[] @relation("CreatedByProjects")
+  reports  Reports[] @relation("GeneratedReports")
+  otps     Otp[]     @relation("UserOTPs")
+
+  refreshToken     String?
+  accessToken      String?
+  resetToken       String?
+  resetTokenExpiry DateTime?
+}
+
+model Project {
+  project_id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  name               String
+  description        String?
+  start_date         DateTime
+  total_duration     Int
+  total_cost     Float
+  status             String
+  manday             Float
+
+  created_by String   @db.ObjectId
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  createdByUser       User                  @relation("CreatedByProjects", fields: [created_by], references: [user_id])
+  tasks               Task[]
+  ResourceAllocations ResourceAllocations[]
+  CostEstimations     CostEstimations[]
+  DurationEstimations DurationEstimations[]
+}
+
+model Task {
+  task_id          String @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  status           String
+  workload         Float
+  duration         Float
+  cost             Float
+  //percentResources Float
+
+  project_id String  @db.ObjectId
+  updated_by   String? @db.ObjectId
+
+  project    Project @relation(fields: [project_id], references: [project_id])
+
+  created_at          DateTime              @default(now())
+  updated_at          DateTime              @updatedAt
+  ResourceAllocations ResourceAllocations[]
+}
+
+model Resource {
+  resource_id String @id @default(auto()) @map("_id") @db.ObjectId  //Primary Key
+  name        String @unique // Role name (e.g., "Junior Software Engineer")
+  rate        Float // Wage rate per hour
+  description String?
+
+  users User[] // One resource can have many users
+  ResourceAllocations ResourceAllocations[]
+
+  created_at          DateTime              @default(now())
+  updated_at          DateTime              @updatedAt
+}
+
+model ResourceAllocations {
+  allocation_id         String @id @default(auto()) @map("_id") @db.ObjectId
+  resource_id           String @db.ObjectId
+  project_id            String @db.ObjectId
+  task_id               String @db.ObjectId
+  allocation_percentage Float
+  resource_hours        Float
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  task     Task     @relation(fields: [task_id], references: [task_id])
+  project  Project  @relation(fields: [project_id], references: [project_id])
+  resource Resource @relation(fields: [resource_id], references: [resource_id])
+}
+
+model Reports {
+  report_id    String   @id @default(auto()) @map("_id") @db.ObjectId
+  start_date   DateTime
+  end_date     DateTime
+  data         String
+  generated_by String   @db.ObjectId
+  created_at   DateTime @default(now())
+
+  generatedByUser User @relation("GeneratedReports", fields: [generated_by], references: [user_id])
+}
+
+model CostEstimations {
+  cost_id        String @id @default(auto()) @map("_id") @db.ObjectId
+  project_id     String @db.ObjectId
+  total_hours    Float
+  estimated_cost Float
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  project Project @relation(fields: [project_id], references: [project_id])
+}
+
+model DurationEstimations {
+  duration_id   String @id @default(auto()) @map("_id") @db.ObjectId
+  project_id    String @db.ObjectId
+  total_hours   Float
+  estimated_day Int
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  project Project @relation(fields: [project_id], references: [project_id])
+}
+
+model Otp {
+  otp_id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  code       String
+  expires_at DateTime
+  email      String
+  user_id    String?  @db.ObjectId
+  created_at DateTime @default(now())
+
+  user       User? @relation("UserOTPs", fields: [user_id], references: [user_id])
+}
