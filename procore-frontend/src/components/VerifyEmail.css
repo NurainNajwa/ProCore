@@ -1,0 +1,122 @@
+/* Verify Email Page Styling */
+.verify-email-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4F266C, #CE7BA4); /* Gradient background */
+    padding: 20px; /* Ensure proper spacing on smaller screens */
+  }
+  
+  .verify-email-box {
+    background: rgba(255, 255, 255, 0.3); /* Slightly more transparency for a softer look */
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better focus */
+    backdrop-filter: blur(10px); /* Adds a glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
+    display: flex;
+    flex-direction: column; /* Ensure all child elements stack vertically */
+    gap: 20px; /* Adds consistent spacing between sections */
+  }
+  
+  .verify-email-box h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  .verify-email-box .instruction {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+  }
+  
+  .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adds spacing between input fields */
+    margin-bottom: 20px;
+  }
+  
+  .otp-inputs input {
+    width: 60px; /* Increased width */
+    height: 60px; /* Increased height */
+    font-size: 22px; /* Larger font size for better readability */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px; /* Slightly rounded corners for aesthetics */
+    background: rgba(255, 255, 255, 0.2); /* Transparent input background */
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .otp-inputs input:focus {
+    border-color: #CE7BA4;
+    background-color: rgba(255, 255, 255, 0.4); /* Brighter background on focus */
+  }
+  
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Adds spacing between the Cancel and Verify buttons */
+  }
+  
+  .cancel-btn,
+  .verify-btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+  }
+  
+  .cancel-btn {
+    background-color: white;
+    color: #75407D;
+    border: none;
+  }
+  
+  .cancel-btn a {
+    color: inherit; /* Matches the button text color */
+    text-decoration: none;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .verify-btn {
+    background-color: #501f58;
+    color: white;
+    border: none;
+  }
+  
+  .verify-btn:hover {
+    background-color: #75407D;
+  }
+  
+  .resend {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 10px; /* Adds spacing above the resend link */
+  }
+  
+  .resend a {
+    color: #f8c1dc;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .resend a:hover {
+    color: #fff;
+  }
+  

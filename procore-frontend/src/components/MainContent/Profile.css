@@ -1,0 +1,92 @@
+/* Profile Page Container */
+.profile-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Page Title */
+  .profile-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Profile Form */
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Labels */
+  .profile-form label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    display: block;
+  }
+  
+  /* Input Fields */
+  .profile-form input[type="text"],
+  .profile-form input[type="email"],
+  .profile-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .profile-form input[type="text"]:focus,
+  .profile-form input[type="email"]:focus,
+  .profile-form input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* File Input */
+  .profile-form input[type="file"] {
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Submit Button */
+  .profile-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .profile-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Profile Image Preview */
+  .profile-image-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .profile-container {
+      width: 90%;
+    }
+  }
+  

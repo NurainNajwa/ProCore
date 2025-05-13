@@ -1,0 +1,232 @@
+/* Background Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(8px); /* Slightly stronger blur for effect */
+    padding: 20px; /* Adds some spacing for smaller screens */
+}
+
+/* Login Box */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly more transparent */
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Adjusted alpha for subtlety */
+    max-width: 500px; /* Restricts width for responsiveness */
+    width: 100%; /* Ensures it adapts to smaller screens */
+    min-height: 500px; /* Ensures minimum height */
+}
+
+/* Login Title */
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem; /* Responsive font size */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Input Group Styling */
+.input-group {
+    position: relative; /* For icon placement */
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Input Fields */
+.input-group input {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border: 1px solid #ccc;
+    border-radius: 25px; /* More rounded corners */
+    padding: 12px 15px 12px 15px; /* Padding for content */
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+.input-group input::placeholder {
+    color: #ddd; /* Placeholder color */
+    opacity: 0.8;
+}
+
+.input-group input:focus {
+    border-color: #fff; /* Highlight border */
+}
+
+/* Input Icons */
+.input-group .icon  {
+    position: absolute;
+    right: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Adjust for password icon to be on the right */
+.input-group .icon .password {
+    right: 15px; /* Align password icon to the right */
+    left: unset; /* Unset left positioning */
+    cursor: pointer; /* Make the icon clickable */
+}
+
+/* Options (Remember Me & Forgot Password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 30px; /* Increased spacing below options */
+}
+
+/* Login Button */
+button {
+    background-color: #fff;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%; /* Full-width button */
+    font-size: 1rem; /* Responsive font size */
+    margin-bottom: 20px; /* Added space below the button */
+}
+
+button:hover {
+    background-color: #999999;
+    color: #fff;
+    transform: scale(1.05); 
+}
+
+/* Register Option */
+.login-box p {
+    margin-top: 20px; /* Added gap above Register text */
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.login-box p a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline; /* Add underline for better visibility */
+    transition: color 0.3s ease;
+}
+
+.login-box p a:hover {
+    color: #ddd; /* Slightly lighter hover color */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ddd; /* Slightly lighter on hover */
+}
+
+/* Responsive Design for Medium Screens (Tablets) */
+@media (max-width: 992px) {
+    .login-box {
+        max-width: 400px; /* Adjust width for tablets */
+        padding: 25px 20px; /* Reduced padding */
+        min-height: 450px; /* Adjust minimum height */
+    }
+
+    h2 {
+        font-size: 2rem; /* Smaller title for tablets */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Smaller font for input fields */
+        padding: 10px 12px; /* Reduced padding */
+    }
+
+    button {
+        font-size: 0.9rem; /* Slightly smaller button font */
+    }
+}
+
+/* Responsive Design for Small Screens (Mobile Phones) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px; /* Add padding for smaller screens */
+    }
+
+    .login-box {
+        max-width: 90%; /* Use almost full screen width */
+        padding: 20px; /* Further reduce padding */
+        min-height: 400px; /* Lower minimum height */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Smaller title on mobile */
+    }
+
+    .options {
+        flex-direction: column; /* Stack Remember Me and Forgot Password */
+        gap: 10px; /* Add spacing between stacked options */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Smaller input font size */
+        padding: 8px 10px; /* Adjust padding for mobile */
+    }
+
+    button {
+        font-size: 0.85rem; /* Smaller button font size */
+    }
+}
+
+/* Responsive Design for Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 15px; /* Reduce padding further for very small screens */
+        min-height: 350px; /* Minimize height for small phones */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Further reduce title size */
+    }
+
+    .input-group input {
+        font-size: 13px; /* Smaller font for input fields */
+    }
+
+    button {
+        font-size: 0.8rem; /* Reduce button font size */
+        padding: 10px; /* Reduce button padding */
+    }
+
+    .options {
+        font-size: 12px; /* Smaller text for Remember Me and Forgot Password */
+    }
+
+    .login-box p {
+        font-size: 12px; /* Smaller text for Register link */
+    }
+}
+

@@ -1,0 +1,188 @@
+/* Background Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Register Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+}
+
+/* Register Box */
+.register-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 500px;
+    width: 100%;
+    min-height: 550px;
+}
+
+/* Title */
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+  
+.input-group input:focus {
+    outline: none;
+    border: 2px solid #ffeb3b;
+}
+
+.input-group select {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #000000;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; 
+} 
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.checkbox-group a:hover {
+    color: #ddd;
+}
+
+/* Register Button */
+.register-btn {
+    background-color: #fff;
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.register-btn:hover {
+    background-color: #999999;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Sign In Link */
+.signin-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.signin-link a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.signin-link a:hover {
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-box {
+        padding: 30px 20px;
+        min-height: 500px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .register-btn {
+        font-size: 0.9rem;
+    }
+
+    .checkbox-group {
+        font-size: 12px;
+    }
+
+    .signin-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: 20px;
+        min-height: 450px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .register-btn {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .checkbox-group {
+        font-size: 10px;
+    }
+
+    .signin-link {
+        font-size: 10px;
+    }
+
+}

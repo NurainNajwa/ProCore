@@ -1,0 +1,70 @@
+/* Container for the entire metrics section */
+.metrics-cards {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure no wrapping of cards */
+  justify-content: space-evenly; /* Space the cards evenly */
+  gap: 20px; /* Space between cards */
+  margin-bottom: 10px;
+  padding: 20px; /* Padding for the whole section */
+  background-color: #f9f9f9; /* Light background for the entire section */
+  border-radius: 8px; /* Rounded corners for the entire container */
+  width: 100%; /* Ensure the container takes up full width */
+  overflow-x: auto; /* Allow horizontal scrolling if cards overflow */
+}
+
+/* Individual card for each metric */
+.metric-card {
+  flex: 1 1 30%; /* Each card will take at least 30% width */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  border: 1px solid #ddd; /* Light border around each card */
+  border-radius: 10px; /* Rounded corners for each card */
+  padding: 20px; /* Padding inside each card */
+  background-color: #fff; /* White background for each card */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center the text inside the card */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add hover effect for interactivity */
+  max-width: 300px; /* Limit the maximum width of each card */
+}
+
+/* Hover effect for the cards */
+.metric-card:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Title of each metric card */
+.metric-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #555; /* Dark gray for the title */
+  font-weight: 600;
+}
+
+/* Value displayed in each metric card */
+.metric-card p {
+  font-size: 1.7rem; /* Larger font size for the value */
+  font-weight: bold; /* Bold font for emphasis */
+  color: #ff6347; /* Tomato red for the value */
+  margin: 5px 0; /* Spacing around the value */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+/* Trend indicators for each metric */
+.metric-card .trend {
+  font-size: 1rem;
+  color: #28a745; /* Default color for uptrend (green) */
+}
+
+.metric-card .trend.down {
+  color: #dc3545; /* Red for downtrend */
+}
+
+/* Small text, such as "this month" */
+.metric-card span {
+  font-size: 0.9rem;
+  color: #888; /* Light gray color for trend text */
+  margin-top: 5px; /* Space above the trend text */
+}

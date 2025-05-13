@@ -1,0 +1,132 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: #ffffff;
+  width: 600px;
+  max-width: 90%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup h2 {
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+  color: #343a40;
+  text-align: center;
+}
+
+.popup-content {
+  margin-bottom: 20px;
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 5px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.popup-content input,
+.popup-content select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #495057;
+  margin-top: 5px;
+  background: #ffffff;
+}
+
+.popup-content input:disabled {
+  background: #e9ecef;
+  cursor: not-allowed;
+}
+
+.popup-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #ffffff;
+}
+
+.popup-content th,
+.popup-content td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.9rem;
+}
+
+.popup-content th {
+  background: #f1f3f5;
+  color: #495057;
+}
+
+.popup-content tr:hover {
+  background: #f8f9fa;
+}
+
+.popup-content button {
+  padding: 6px 12px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #0056b3;
+}
+
+
+
+.popup-actions .close-btn {
+  background: #6c757d;
+}
+
+.popup-actions .close-btn:hover {
+  background: #5a6268;
+}
+
+.popup-actions .submit-btn {
+  background: #28a745;
+}
+
+.popup-actions .submit-btn:hover {
+  background: #218838;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

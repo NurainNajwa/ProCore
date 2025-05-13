@@ -1,0 +1,160 @@
+.project-details-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .breadcrumb span {
+    color: #6c757d;
+  }
+  
+  .project-header {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-header h1 {
+    margin: 0 0 10px;
+    font-size: 1.8rem;
+    color: #343a40;
+  }
+  
+  .metrics {
+    display: flex;
+    gap: 20px;
+    font-size: 1rem;
+    color: #495057;
+  }
+  
+  .metrics div {
+    background: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tasks-table th,
+  .tasks-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .tasks-table th {
+    background: #f1f3f5;
+    color: #495057;
+  }
+  
+  .tasks-table tr:hover {
+    background: #f8f9fa;
+  }
+  .task,
+  .resource {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #212529;
+  }
+  
+  .resource-allocation {
+    font-size: 0.9rem;
+    color: #495057;
+  }
+  
+  .editable-input {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.9rem;
+    color: #495057;
+    background: #ffffff;
+  }
+  
+  .editable-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+  }
+  
+  .resource-dropdown {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .add-resource-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .add-resource-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .new-resource {
+    margin-top: 20px;
+  }
+  
+  .add-resource-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .add-resource-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .add-task {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .add-task-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-task-btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
